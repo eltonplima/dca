@@ -2,6 +2,31 @@
 
 * [best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
+## Build via stdin
+
+Toda vez que fazemos o build de uma imagem precisamos fornecer um contexto, que geralmente é o diretório corrente, mas quando fazemos o build via stdin a única coisa que existe no contexto é o Dockerfile criado via heredoc.
+
+No exemplo a seguir podemos ver que o build irá falhar por não conseguir encontrar o arquivo **somefile.txt**
+
+[![asciicast](https://asciinema.org/a/Mz7qqKoFiq6sARziW8bcyRaDM.svg)](https://asciinema.org/a/Mz7qqKoFiq6sARziW8bcyRaDM)
+
+```
+# create a directory to work in
+mkdir example
+cd example
+
+# create an example file
+touch somefile.txt
+
+docker build -t myimage:latest -<<EOF
+FROM busybox
+COPY somefile.txt .
+RUN cat /somefile.txt
+EOF
+```
+
+## Otimização de layers
+
 O comando **RUN** só vai criar uma nova layer se executar alguma instrução que exija alterar o filesystem
 
 [![asciicast](https://asciinema.org/a/F3OPtIj4YltuyiXofxEWjEP3W.svg)](https://asciinema.org/a/F3OPtIj4YltuyiXofxEWjEP3W)
