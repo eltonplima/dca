@@ -3,6 +3,8 @@
 * Escalar serviços
   * `docker service scale <NAME OF SERVICE>=<NUMBER OF REPLICAS>`
   * `docker service update --replicas=<NUMBER OF REPLICAS> <NAME OF SERVICE>`
+  * Escalar múltiplos serviços
+    * `docker service scale <NAME OF SERVICE 1>=<NUMBER OF REPLICAS> <NAME OF SERVICE 2>=<NUMBER OF REPLICAS>`
 * Modos de serviços:
   * replicated
     * Pode escalar livremente podendo ter de 1 a N instâncias dentro do cluster
