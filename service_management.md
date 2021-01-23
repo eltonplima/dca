@@ -10,3 +10,4 @@
     * Pode escalar livremente podendo ter de 1 a N instâncias dentro do cluster
   * global
     * Garante que você tera um container do serviço especifica executando em cada nó do cluster
+[![asciicast](https://asciinema.org/a/386415.svg)](https://asciinema.org/a/386415)
