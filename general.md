@@ -3,8 +3,7 @@
 ## Arquivos e diretórios importantes
 
 * /etc/docker/daemon.json - Arquivos de configuração
-<pre>
-/var/lib/docker/
+* <pre>/var/lib/docker/
   ├── builder
   ├── buildkit
   ├── containers
