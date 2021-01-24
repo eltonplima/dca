@@ -36,3 +36,11 @@ docker node demote <MANAGER_NODE>
 docker node update --availability active <MANAGER_NODE>
 docker node promote <MANAGER_NODE>
 ```
+
+## Forçar rebalancing de um serviço
+
+Se quiser forçar a redistribuição dos containers no cluster use o comando:
+
+```shell
+docker service update --force loja_loja
+```
