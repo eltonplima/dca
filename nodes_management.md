@@ -10,6 +10,12 @@ Conectar em um dos managers para monitorar os nós do cluster
 watch docker node ls
 ```
 
+Se tiver algum serviço que possui containers distribuídos por todo cluster podes monitorar este serviço para ver a migração dos containers em real time
+
+```bash
+watch docker service ps <SERVICE NAME OR ID>
+```
+
 ### Cluster com 3 managers e N workers
 
 * Promover o _worker1_
