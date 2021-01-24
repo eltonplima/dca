@@ -17,3 +17,8 @@
   ├── trust
   └── volumes
 </pre>
+
+## Logging
+
+* O formato padrão dos logs é `json-file`
+* A opção que permite customizar o logging driver use: `docker container run -d --log-driver <DRIVER> <IMAGE>`
