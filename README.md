@@ -6,3 +6,4 @@ Minhas anotações de estudo para a prova de certificação DCA
 * [containers vs services](./containers_vs_services.md)
 * [service management](./service_management.md)
 * [docker images](./docker_images.md)
+* [nodes management](./nodes_management.md)
